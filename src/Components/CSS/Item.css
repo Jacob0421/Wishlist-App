@@ -1,0 +1,28 @@
+.ItemCard{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
+    outline: solid black 1px;
+    box-shadow: 0 0 .6em .1em grey;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 2px;;
+}
+
+.ItemPicture {
+    object-fit: cover;
+    max-height: 4rem;
+    max-width: inherit;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.ItemName {
+
+}
+
+.ItemPrice{
+    
+}

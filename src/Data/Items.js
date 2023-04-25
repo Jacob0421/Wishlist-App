@@ -1,0 +1,73 @@
+export const Items = [
+	{
+		ItemId: 1,
+		ItemName: "Item 1",
+		ItemURL: "https://Item1URL.com",
+		ItemPicture:
+			"https://ichef.bbci.co.uk/news/976/cpsprodpb/15951/production/_117310488_16.jpg.webp",
+		ItemPrice: 19.99,
+	},
+	{
+		ItemId: 2,
+		ItemName: "Item 2",
+		ItemURL: "https://Item2URL.com",
+		ItemPicture: "",
+		ItemPrice: 9.99,
+	},
+	{
+		ItemId: 3,
+		ItemName: "Item 3",
+		ItemURL: "https://Item3URL.com",
+		ItemPicture: "",
+		ItemPrice: 29.99,
+	},
+	{
+		ItemId: 4,
+		ItemName: "Item 4",
+		ItemURL: "https://Item4URL.com",
+		ItemPicture: "",
+		ItemPrice: 29.99,
+	},
+	{
+		ItemId: 5,
+		ItemName: "Item 5",
+		ItemURL: "https://Item5URL.com",
+		ItemPicture: "",
+		ItemPrice: 29.99,
+	},
+	{
+		ItemId: 6,
+		ItemName: "Item 6",
+		ItemURL: "https://Item6URL.com",
+		ItemPicture: "",
+		ItemPrice: 29.99,
+	},
+	{
+		ItemId: 7,
+		ItemName: "Item 7",
+		ItemURL: "https://Item7URL.com",
+		ItemPicture: "",
+		ItemPrice: 29.99,
+	},
+	{
+		ItemId: 8,
+		ItemName: "Item 8",
+		ItemURL: "https://Item8URL.com",
+		ItemPicture: "",
+		ItemPrice: 29.99,
+	},
+	{
+		ItemId: 9,
+		ItemName: "Item 9",
+		ItemURL: "https://Item9URL.com",
+		ItemPicture: "",
+		ItemPrice: 29.99,
+	},
+	{
+		ItemId: 10,
+		ItemName: "Item 10",
+		ItemURL: "https://Item10URL.com",
+		ItemPicture: "",
+		ItemPrice: 29.99,
+	},
+];
