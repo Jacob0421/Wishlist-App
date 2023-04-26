@@ -1,6 +1,7 @@
 import { Outlet, Link } from "react-router-dom";
+import "./CSS/Layout.css";
 
-const layout = () => {
+function Layout() {
 	return (
 		<>
 			<nav>
@@ -9,13 +10,13 @@ const layout = () => {
 						<Link to="/">Home</Link>
 					</li>
 					<li>
-						<Link to="/WishLists">Wishlists</Link>
+						<Link to="/Wishlists">Wishlists</Link>
 					</li>
 				</ul>
 			</nav>
 			<Outlet />
 		</>
 	);
-};
+}
 
-export default layout;
+export default Layout;

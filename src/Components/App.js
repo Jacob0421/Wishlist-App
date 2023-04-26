@@ -1,7 +1,7 @@
-import logo from "./logo.svg";
-import "./App.css";
-import "./Components/ItemContainer";
-import ItemContainer from "./Components/ItemContainer";
+import logo from "./img/logo.svg";
+import "./CSS/App.css";
+import "./img/logo.svg";
+import "./ItemContainer";
 
 function App() {
 	if (process.env.NODE_ENV === "development") {
