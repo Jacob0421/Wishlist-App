@@ -3,8 +3,11 @@ import "./CSS/Item.css";
 
 function Item(props) {
 	return (
-		<div class="ItemCard">
-			<img class="ItemPicture" src={props.picture} alt={props.name}></img>
+		<div className="ItemCard">
+			<img
+				className="ItemPicture"
+				src={props.picture}
+				alt={props.name}></img>
 			<p>
 				Title: <strong>{props.name}</strong>
 			</p>

@@ -1,6 +1,6 @@
 import { React, useEffect, useState } from "react";
 import Item from "./Item";
-import { ListItems } from "../Data/ListItems";
+import { Lists } from "../Data/Lists";
 import { Items as itemData } from "../Data/Items";
 import "./CSS/ItemContainer.css";
 
@@ -9,11 +9,11 @@ function ItemContainer() {
 
 	useEffect(() => {
 		fetchItems();
-	}, [items]);
+	}, []);
 
 	const fetchItems = () => {
 		setItems(
-			ListItems.reduce((returnedItems, li) => {
+			Lists.reduce((returnedItems, li) => {
 				if (li.ListId === 6) {
 					returnedItems.push(
 						itemData.find((i) => i.ItemId === li.ItemId)
@@ -26,7 +26,7 @@ function ItemContainer() {
 
 	return (
 		<div>
-			<div class="ItemContainer">
+			<div className="ItemContainer">
 				{items.map((item) => (
 					<Item
 						key={item.ItemId}

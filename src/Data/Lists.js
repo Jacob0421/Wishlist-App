@@ -1,74 +1,110 @@
-export const ListItems = [
+export const Lists = [
 	{
 		ListId: 1,
+		GroupId: 1,
 		ItemId: 1,
+		OwnerId: 1,
 	},
 	{
 		ListId: 1,
+		GroupId: 1,
 		ItemId: 3,
+		OwnerId: 1,
 	},
 	{
 		ListId: 1,
+		GroupId: 1,
 		ItemId: 7,
+		OwnerId: 1,
 	},
 	{
 		ListId: 2,
+		GroupId: 1,
 		ItemId: 1,
+		OwnerId: 1,
 	},
 	{
 		ListId: 2,
+		GroupId: 1,
 		ItemId: 2,
+		OwnerId: 1,
 	},
 	{
 		ListId: 2,
+		GroupId: 1,
 		ItemId: 5,
+		OwnerId: 1,
 	},
 	{
 		ListId: 3,
+		GroupId: 1,
 		ItemId: 7,
+		OwnerId: 2,
 	},
 	{
 		ListId: 4,
+		GroupId: 1,
 		ItemId: 5,
+		OwnerId: 2,
 	},
 	{
 		ListId: 4,
+		GroupId: 1,
 		ItemId: 1,
+		OwnerId: 2,
 	},
 	{
 		ListId: 5,
+		GroupId: 1,
 		ItemId: 5,
+		OwnerId: 3,
 	},
 	{
 		ListId: 5,
+		GroupId: 1,
 		ItemId: 8,
+		OwnerId: 3,
 	},
 	{
 		ListId: 5,
+		GroupId: 1,
 		ItemId: 9,
+		OwnerId: 3,
 	},
 	{
 		ListId: 6,
+		GroupId: 1,
 		ItemId: 5,
+		OwnerId: 3,
 	},
 	{
 		ListId: 6,
+		GroupId: 1,
 		ItemId: 4,
+		OwnerId: 3,
 	},
 	{
 		ListId: 6,
+		GroupId: 1,
 		ItemId: 1,
+		OwnerId: 3,
 	},
 	{
 		ListId: 6,
+		GroupId: 1,
 		ItemId: 10,
+		OwnerId: 3,
 	},
 	{
 		ListId: 6,
+		GroupId: 1,
 		ItemId: 2,
+		OwnerId: 3,
 	},
 	{
 		ListId: 6,
+		GroupId: 1,
 		ItemId: 3,
+		OwnerId: 3,
 	},
 ];
