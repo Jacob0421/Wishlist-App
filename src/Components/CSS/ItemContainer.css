@@ -1,6 +1,12 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
 .ItemContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 98%;
+    width: 80vw;
+    margin: auto;
 }

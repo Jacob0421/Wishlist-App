@@ -9,11 +9,11 @@ function Item(props) {
 				src={props.picture}
 				alt={props.name}></img>
 			<p>
-				Title: <strong>{props.name}</strong>
+				<strong>{props.name}</strong>
 			</p>
 			<p>${props.price}</p>
 			<a href={props.url} target="_blank" rel="noreferrer">
-				<button>Buy Now!</button>
+				<button className="BuyNow">Buy Now!</button>
 			</a>
 		</div>
 	);

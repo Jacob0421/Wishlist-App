@@ -9,13 +9,15 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
 	<React.StrictMode>
-		<Router>
-			<Routes>
-				<Route path="/" element={<Layout />}>
-					<Route index element={<App />} />
-					<Route path="/wishlists" element={<ItemContainer />} />
-				</Route>
-			</Routes>
-		</Router>
+		<div className="contentcontainer">
+			<Router>
+				<Routes>
+					<Route path="/" element={<Layout />}>
+						<Route index element={<App />} />
+						<Route path="/Wishlists" element={<ItemContainer />} />
+					</Route>
+				</Routes>
+			</Router>
+		</div>
 	</React.StrictMode>
 );

@@ -1,3 +1,37 @@
+:root{
+    --primary-color:#A2C5AC;
+    --secondary-color:#9DB5B2;
+    --tertiary-color:#878E99;
+    --flat-color: #D3D5D4;
+    --accent-color:#7F6A93;
+}
+
+nav {
+    background-color: var(--flat-color);
+    color: var(--accent-color);
+    /* width: 95vw; */
+    display: flex;
+    margin: auto;
+    width: 100vw;
+}
+
 ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: block;
+    border: solid 1px var(--secondary-color);
+    border-radius: 5%;
+    padding: 2vh .5vw 2vh .5vw;
+    min-width: 3vw;
+    text-align: center;
+}
+
+li > a {
     text-decoration: none;
 }
