@@ -11,7 +11,9 @@ function Item(props) {
 			<p>
 				<strong>{props.name}</strong>
 			</p>
-			<p>${props.price}</p>
+			<p className="ItemPrice">
+				<strong>${props.price}</strong>
+			</p>
 			<a href={props.url} target="_blank" rel="noreferrer">
 				<button className="BuyNow">Buy Now!</button>
 			</a>

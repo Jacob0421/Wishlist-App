@@ -7,12 +7,14 @@
 }
 
 nav {
-    background-color: var(--flat-color);
+    background-color: var(--accent-color);
     color: var(--accent-color);
     /* width: 95vw; */
     display: flex;
     margin: auto;
     width: 100vw;
+    height: 50vh;
+    transition: 1s;
 }
 
 ul {
@@ -30,8 +32,14 @@ li {
     padding: 2vh .5vw 2vh .5vw;
     min-width: 3vw;
     text-align: center;
+    background-color: var(--flat-color)
 }
 
 li > a {
+    height: inherit;
     text-decoration: none;
+}
+
+.fade-out {
+    opacity: 0;
 }

@@ -16,6 +16,8 @@
     margin: 15px;
     border-radius: 2px;
     align-items: center;;
+    background-color: White;
+    height: 30vh;
 }
 
 .ItemPicture {
@@ -33,12 +35,12 @@
 }
 
 .ItemPrice{
-    
+    color: var(--tertiary-color)
 }
 
 .BuyNow {
     background-color: var(--accent-color);
-    color: var(--primary-color);
+    color: var(--secondary-color);
     border-radius: 10%;
     height: 4vh;
     width: 4vw;
