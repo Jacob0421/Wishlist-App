@@ -1,7 +1,7 @@
 import logo from "./img/logo.svg";
 import "./CSS/App.css";
 import "./img/logo.svg";
-import "./ItemContainer";
+import DivEffectContainer from "./DivEffectContainer";
 
 function App() {
 	if (process.env.NODE_ENV === "development") {
@@ -9,6 +9,7 @@ function App() {
 
 	return (
 		<div className="App">
+			<DivEffectContainer />
 			<header className="App-header">
 				<img src={logo} className="App-logo" alt="logo" />
 				<p>

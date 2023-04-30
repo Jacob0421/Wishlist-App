@@ -13,7 +13,7 @@ nav {
     display: flex;
     margin: auto;
     width: 100vw;
-    height: 50vh;
+    height: 7vh;
     transition: 1s;
 }
 
@@ -38,8 +38,4 @@ li {
 li > a {
     height: inherit;
     text-decoration: none;
-}
-
-.fade-out {
-    opacity: 0;
 }

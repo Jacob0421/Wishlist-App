@@ -1,0 +1,14 @@
+:root{
+    --primary-color:#A2C5AC;
+    --secondary-color:#9DB5B2;
+    --tertiary-color:#878E99;
+    --flat-color: #D3D5D4;
+    --accent-color:#7F6A93;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
