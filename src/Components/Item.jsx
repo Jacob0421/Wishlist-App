@@ -8,13 +8,15 @@ function Item(props) {
 				className="ItemPicture"
 				src={props.picture}
 				alt={props.name}></img>
-			<p>
-				<strong>{props.name}</strong>
-			</p>
+			<p className="ItemName">{props.name}</p>
 			<p className="ItemPrice">
 				<strong>${props.price}</strong>
 			</p>
-			<a href={props.url} target="_blank" rel="noreferrer">
+			<a
+				className="BuyNow-link"
+				href={props.url}
+				target="_blank"
+				rel="noreferrer">
 				<button className="BuyNow">Buy Now!</button>
 			</a>
 		</div>

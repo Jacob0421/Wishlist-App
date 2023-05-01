@@ -25,16 +25,19 @@ function ItemContainer() {
 	};
 
 	return (
-		<div className="ItemContainer">
-			{items.map((item) => (
-				<Item
-					key={item.ItemId}
-					name={item.ItemName}
-					url={item.ItemURL}
-					picture={item.ItemPicture}
-					price={item.ItemPrice}
-				/>
-			))}
+		<div className="div-container">
+			<div className="background"></div>
+			<div className="ItemContainer">
+				{items.map((item) => (
+					<Item
+						key={item.ItemId}
+						name={item.ItemName}
+						url={item.ItemURL}
+						picture={item.ItemPicture}
+						price={item.ItemPrice}
+					/>
+				))}
+			</div>
 		</div>
 	);
 }

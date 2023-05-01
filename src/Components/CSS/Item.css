@@ -1,37 +1,39 @@
 :root{
-    --primary-color:#A2C5AC;
-    --secondary-color:#9DB5B2;
-    --tertiary-color:#878E99;
-    --flat-color: #D3D5D4;
-    --accent-color:#7F6A93;
+    --primary-color:#28136B;
+    --secondary-color:#253992;
+    --tertiary-color:#8A348C;
+    --flat-color: #E5E5E5;
+    --accent-color:#64D5FF;
 }
 
 .ItemCard{
     display: flex;
     flex-direction: column;
     flex-basis: 15%;
-    outline: solid var(--accent-color) 1px;
-    box-shadow: 0 0 .6em .1em var(--tertiary-color);
-    padding: 15px;
-    margin: 15px;
-    border-radius: 2px;
-    align-items: center;;
     background-color: White;
     height: 30vh;
+    padding: 15px;
+    margin: 15px;
+    align-items: center;
+    overflow:hidden;
+    outline: solid black 1px;
+    box-shadow: 0 0 .6em .1em black;
+    border-radius: 2px;
 }
 
 .ItemPicture {
     object-fit: cover;
     max-height: 7rem;
     max-width: inherit;
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
+    transition-duration: .5s;
 }
+    .ItemPicture:hover {
+        max-height: 100%;
+    }
 
 .ItemName {
-
+    font-weight: bolder;
+    color: black;
 }
 
 .ItemPrice{
@@ -39,11 +41,20 @@
 }
 
 .BuyNow {
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
-    border-radius: 10%;
-    height: 4vh;
-    width: 4vw;
-    border: solid 1px var(--secondary-color);
-    box-shadow: 1px 1px .2em .2em var(--tertiary-color);
+    all: unset;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: bolder;
+    padding: 0.5vh .5vw;
+    border-radius: 20px;
+    outline: solid 1px black;
+    transition: ease .2s;
 }
+    .BuyNow:hover{
+        cursor: pointer;
+        outline-offset: 3px;
+    }
+    
+    .BuyNow-link {
+        text-decoration: none;
+    }
