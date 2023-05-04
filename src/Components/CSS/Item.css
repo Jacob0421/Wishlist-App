@@ -19,11 +19,11 @@
     outline: solid black 1px;
     box-shadow: 0 0 .6em .1em black;
     border-radius: 2px;
+    opacity: 0;
 }
 
 @keyframes slideIn {
     from {
-        opacity: 0;
         transform: translateX(300px);
     }
 
