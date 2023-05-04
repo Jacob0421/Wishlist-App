@@ -9,9 +9,9 @@
 .ItemCard{
     display: flex;
     flex-direction: column;
-    flex-basis: 15%;
+    flex-basis: 15vw;
     background-color: White;
-    height: 30vh;
+    height: 40vh;
     padding: 15px;
     margin: 15px;
     align-items: center;
@@ -34,7 +34,19 @@
 .ItemName {
     font-weight: bolder;
     color: black;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    transition: linear .2s
 }
+    .ItemName:hover {
+        color: var(--primary-color);
+        text-decoration: underline;
+        text-decoration-color: var(--tertiary-color);
+        overflow: visible;
+        cursor: default;
+    }
 
 .ItemPrice{
     color: var(--tertiary-color)

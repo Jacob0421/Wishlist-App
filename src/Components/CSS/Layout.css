@@ -7,11 +7,10 @@
 }
 
 nav {
-    background: var(--primary-color);
+    background: var(--flat-color);
     color: var(--accent-color);
     display: flex;
     width: 100vw;
-    height: 5vh;
     transition: 1s;
 }
 
@@ -25,15 +24,17 @@ ul {
 
 li {
     display: block;
-    border: solid 1px var(--secondary-color);
-    border-radius: 5%;
     padding: 2vh .5vw;
     min-width: 3vw;
     text-align: center;
     background-color: var(--flat-color)
 }
+    nav > ul > li:hover{
+        outline: 1px solid var(--primary-color);
+        background-color: #D5D5D5;
+    }
 
 li > a {
-    height: inherit;
+    height: 100%;
     text-decoration: none;
 }

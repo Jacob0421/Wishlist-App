@@ -1,11 +1,13 @@
 export const Items = [
 	{
 		ItemId: 1,
-		ItemName: "Item 1",
-		ItemURL: "https://Item1URL.com",
+		ItemName:
+			"LYMAX Computer Monitor Led Lights with Remote: PC Monitor LED Bar Eye Caring Monitor Led Lights Adjustable Monitor Led Lights Desk Lamp for Home Office Gaming",
+		ItemURL:
+			"https://www.amazon.com/LYMAX-Computer-Monitor-Lights-Remote/dp/B09PQKBFRS/?_encoding=UTF8&pd_rd_w=XN4qv&content-id=amzn1.sym.bc5f3394-3b4c-4031-8ac0-18107ac75816&pf_rd_p=bc5f3394-3b4c-4031-8ac0-18107ac75816&pf_rd_r=ZSKCDMXEY8NZBESHFXQ2&pd_rd_wg=k3Qy7&pd_rd_r=addbb429-f059-4e1f-9777-266110f59fed&ref_=pd_gw_ci_mcx_mr_hp_atf_m&th=1",
 		ItemPicture:
-			"https://ichef.bbci.co.uk/news/976/cpsprodpb/15951/production/_117310488_16.jpg.webp",
-		ItemPrice: 19.99,
+			"https://m.media-amazon.com/images/I/712jpJBkyDL._AC_SX679_.jpg",
+		ItemPrice: 37.49,
 	},
 	{
 		ItemId: 2,
