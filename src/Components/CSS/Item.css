@@ -52,9 +52,6 @@
     transition: linear .2s
 }
     .ItemName:hover {
-        color: var(--primary-color);
-        text-decoration: underline;
-        text-decoration-color: var(--tertiary-color);
         overflow: visible;
         cursor: default;
     }

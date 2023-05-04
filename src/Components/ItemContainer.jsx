@@ -12,7 +12,6 @@ function ItemContainer() {
 	}, []);
 
 	const fetchItems = () => {
-		console.log(itemData);
 		setItems(
 			Lists.reduce((returnedItems, li) => {
 				if (li.ListId === 6) {
