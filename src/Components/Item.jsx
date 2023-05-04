@@ -1,9 +1,26 @@
-import { React } from "react";
+import { React, useEffect, useRef } from "react";
 import "./CSS/Item.css";
 
 function Item(props) {
+	const ref = useRef(null);
+
+	useEffect(() => {
+		if (ref.current.style.opacity === 0) {
+			ref.current.style.opacity = 1;
+		}
+	});
+
 	return (
-		<div className="ItemCard">
+		<div
+			className="ItemCard"
+			style={{
+				animationName: "slideIn",
+				animationDelay: 0.4 * Math.random(10) + "s",
+				animationTimingFunction: "ease",
+				animationDuration: "1s",
+				animationFillMode: "forwards",
+			}}
+			ref={ref}>
 			<img
 				className="ItemPicture"
 				src={props.picture}
