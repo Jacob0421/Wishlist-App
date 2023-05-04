@@ -7,9 +7,6 @@
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
     background: linear-gradient(to bottom right,#28136B 40%, #253992 80%);
     background-size:150% 100%;
     animation: gradient ease 10s infinite;
