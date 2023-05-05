@@ -7,20 +7,25 @@
 }
 
 .ItemCard{
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-basis: 15vw;
     background-color: White;
-    height: 40vh;
+    height: 30vh;
     padding: 15px;
     margin: 15px;
     align-items: center;
     overflow:hidden;
     outline: solid black 1px;
     box-shadow: 0 0 .6em .1em black;
-    border-radius: 2px;
+    border-radius: 30px;
     opacity: 0;
+    transition: 1s
 }
+    .ItemCard:hover{
+        /* height: fit-content; */
+    }
 
 @keyframes slideIn {
     from {
@@ -35,7 +40,7 @@
 .ItemPicture {
     object-fit: cover;
     max-height: 7rem;
-    max-width: inherit;
+    max-width: 20vw;
     transition-duration: .5s;
 }
     .ItemPicture:hover {
@@ -49,7 +54,7 @@
     text-overflow: ellipsis;
     line-clamp: 2;
     -webkit-line-clamp: 2;
-    transition: linear .2s
+    transition: linear .5s
 }
     .ItemName:hover {
         overflow: visible;
@@ -77,4 +82,15 @@
     
     .BuyNow-link {
         text-decoration: none;
+    }
+
+    .fill-parent{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        z-index: -1;
     }

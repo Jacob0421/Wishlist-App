@@ -1,5 +1,6 @@
 import { React, useEffect, useRef } from "react";
 import "./CSS/Item.css";
+import { Link } from "react-router-dom";
 
 function Item(props) {
 	const ref = useRef(null);
@@ -11,32 +12,43 @@ function Item(props) {
 	});
 
 	return (
-		<div
-			className="ItemCard"
-			style={{
-				animationName: "slideIn",
-				animationDelay: 0.4 * Math.random(10) + "s",
-				animationTimingFunction: "ease",
-				animationDuration: "1s",
-				animationFillMode: "forwards",
-			}}
-			ref={ref}>
-			<img
-				className="ItemPicture"
-				src={props.picture}
-				alt={props.name}></img>
-			<p className="ItemName">{props.name}</p>
-			<p className="ItemPrice">
-				<strong>${props.price}</strong>
-			</p>
-			<a
-				className="BuyNow-link"
-				href={props.url}
-				target="_blank"
-				rel="noreferrer">
-				<button className="BuyNow">Buy Now!</button>
-			</a>
-		</div>
+		<>
+			<div
+				className="ItemCard"
+				style={{
+					animationName: "slideIn",
+					animationDelay: 0.4 * Math.random(10) + "s",
+					animationTimingFunction: "ease",
+					animationDuration: "1s",
+					animationFillMode: "forwards",
+				}}
+				ref={ref}>
+				<Link
+					to={{
+						pathname: `/ViewItemDetails/${props.id}`,
+						state: {
+							name: props.name,
+						},
+					}}
+					className="fill-parent"></Link>
+				{console.log(props)}
+				<img
+					className="ItemPicture"
+					src={props.picture}
+					alt={props.name}></img>
+				<p className="ItemName">{props.name}</p>
+				<p className="ItemPrice">
+					<strong>${props.price}</strong>
+				</p>
+				<a
+					className="BuyNow-link"
+					href={props.url}
+					target="_blank"
+					rel="noreferrer">
+					<button className="BuyNow">Buy Now!</button>
+				</a>
+			</div>
+		</>
 	);
 }
 export default Item;

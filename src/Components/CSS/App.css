@@ -1,3 +1,23 @@
+body {
+  background: linear-gradient(to bottom right,#28136B 40%, #253992 80%);
+  background-size:150% 100%;
+  animation: gradient ease 10s infinite;
+  height: 100vh;
+}
+
+@keyframes gradient {
+0% {
+  background-position: 0% 50%;
+}
+50% {
+  background-position: 100% 50%;
+}
+  100%{
+  background-position: 0% 50%;
+}
+}
+
+
 .App {
   text-align: center;
 }

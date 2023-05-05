@@ -31,6 +31,7 @@ function ItemContainer() {
 				{items.map((item) => (
 					<Item
 						key={item.ItemId}
+						id={item.ItemId}
 						name={item.ItemName}
 						url={item.ItemURL}
 						picture={item.ItemPicture}
