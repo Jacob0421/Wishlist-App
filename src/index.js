@@ -18,7 +18,7 @@ root.render(
 					<Route
 						exact
 						path="/ViewItemDetails/:id"
-						component={ViewItemDetails}
+						element={<ViewItemDetails />}
 					/>
 				</Route>
 			</Routes>

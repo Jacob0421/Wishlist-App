@@ -1,13 +1,16 @@
 import React from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 function ViewItemDetails() {
-	const { state } = useLocation();
-	const { name } = state.state;
+	const location = useLocation();
+	const { item } = location.state;
 
 	return (
 		<div>
-			<p>{name}</p>
+			<p>{item.name}</p>
+			<p>{item.price}</p>
+			<img src={item.picture} alt={item.name}></img>
+			<p>{item.url}</p>
 		</div>
 	);
 }
