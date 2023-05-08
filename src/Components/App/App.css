@@ -3,6 +3,9 @@ body {
   background-size:150% 100%;
   animation: gradient ease 10s infinite;
   height: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+
 }
 
 @keyframes gradient {

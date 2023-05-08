@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import DivEffect from "./DivEffect";
-import "./CSS/DivEffectContainer.css";
+import "./DivEffectContainer.css";
 
 function DivEffectContainer() {
 	const [divCount] = useState(3);

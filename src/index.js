@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./index.css";
-import App from "./Components/App";
-import ItemContainer from "./Components/ItemContainer";
-import Layout from "./Components/Layout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import ViewItemDetails from "./Components/ViewItemDetails";
+import Layout from "./Components/Layout/Layout";
+import App from "./Components/App/App";
+import ItemContainer from "./Components/Wishlist/ItemContainer";
+import ViewItemDetails from "./Components/ViewItemDetails/ViewItemDetails";
+import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

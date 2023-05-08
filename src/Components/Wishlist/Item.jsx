@@ -1,6 +1,6 @@
 import { React, useEffect, useRef } from "react";
-import "./CSS/Item.css";
 import { Link } from "react-router-dom";
+import "./Item.css";
 
 function Item(props) {
 	const ref = useRef(null);

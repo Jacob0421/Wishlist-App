@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import "./CSS/DivEffect.css";
+import "./DivEffect.css";
 
 function DivEffect(props) {
 	const [isIntersecting, setIsIntersecting] = useState(false);
