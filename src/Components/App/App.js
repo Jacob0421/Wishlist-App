@@ -1,7 +1,6 @@
-import logo from "./img/logo.svg";
-import "./CSS/App.css";
-import "./img/logo.svg";
-import DivEffectContainer from "./DivEffectContainer";
+import logo from "../../img/logo.svg";
+import "./App.css";
+import DivEffectContainer from "../DivEffect/DivEffectContainer";
 
 function App() {
 	if (process.env.NODE_ENV === "development") {
