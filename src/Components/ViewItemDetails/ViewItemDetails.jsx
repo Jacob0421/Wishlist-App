@@ -7,11 +7,22 @@ function ViewItemDetails() {
 	const { item } = location.state;
 
 	return (
-		<div>
-			<p>{item.name}</p>
-			<p>{item.price}</p>
-			<img src={item.picture} alt={item.name}></img>
-			<p>{item.url}</p>
+		<div className="container">
+			<h2 className="item-name">{item.name}</h2>
+			<div className="item-container">
+				<div>
+					<p>Price: {item.price}</p>
+					<a
+						href={item.url}
+						target="_blank"
+						rel="noreferrer"
+						className="item-link">
+						<button>Visit Seller</button>
+					</a>
+					<button>Edit Item</button>
+				</div>
+				<img src={item.picture} alt={item.name} className="item-img" />
+			</div>
 		</div>
 	);
 }
