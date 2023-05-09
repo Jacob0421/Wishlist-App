@@ -23,9 +23,6 @@
     opacity: 0;
     transition: 1s
 }
-    .ItemCard:hover{
-        /* height: fit-content; */
-    }
 
 @keyframes slideIn {
     from {
