@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./ViewItemDetails.css";
 
 function ViewItemDetails() {
@@ -19,7 +19,14 @@ function ViewItemDetails() {
 						className="item-link">
 						<button>Visit Seller</button>
 					</a>
-					<button>Edit Item</button>
+					<Link
+						to={`/EditItem/${item.id}`}
+						state={{
+							item: item,
+							from: location.pathname,
+						}}>
+						<button>Edit Item</button>
+					</Link>
 				</div>
 				<img src={item.picture} alt={item.name} className="item-img" />
 			</div>

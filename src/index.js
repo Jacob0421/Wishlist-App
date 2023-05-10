@@ -5,6 +5,7 @@ import Layout from "./Components/Layout/Layout";
 import App from "./Components/App/App";
 import ItemContainer from "./Components/Wishlist/ItemContainer";
 import ViewItemDetails from "./Components/ViewItemDetails/ViewItemDetails";
+import EditItem from "./Components/EditItem/EditItem";
 import "./index.css";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -20,6 +21,7 @@ root.render(
 						path="/ViewItemDetails/:id"
 						element={<ViewItemDetails />}
 					/>
+					<Route exact path="/EditItem/:id" element={<EditItem />} />
 				</Route>
 			</Routes>
 		</Router>
