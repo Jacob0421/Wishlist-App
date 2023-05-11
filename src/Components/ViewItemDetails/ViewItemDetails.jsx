@@ -8,6 +8,7 @@ function ViewItemDetails() {
 
 	return (
 		<div className="container">
+			<Link to={"/Wishlists"}>Back</Link>
 			<h2 className="item-name">{item.name}</h2>
 			<div className="item-container">
 				<div>

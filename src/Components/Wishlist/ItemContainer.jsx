@@ -1,28 +1,38 @@
 import { React, useEffect, useState } from "react";
-import { Lists } from "../../Data/Lists";
-import { Items as itemData } from "../../Data/Items";
+// import { Lists } from "../../Data/Lists";
+// import { Items as itemData } from "../../Data/Items";
 import Item from "./Item";
 import "./ItemContainer.css";
 
 function ItemContainer() {
 	const [items, setItems] = useState([]);
+	let isInitialized = false;
 
 	useEffect(() => {
-		fetchItems();
+		if (!isInitialized) {
+			fetchItems();
+			isInitialized = true;
+		}
 	}, []);
 
-	const fetchItems = () => {
-		setItems(
-			Lists.reduce((returnedItems, li) => {
-				if (li.ListId === 6) {
-					returnedItems.push(
-						itemData.find((i) => i.ItemId === li.ItemId)
-					);
-				}
-				return returnedItems.sort((a, b) => a.ItemId - b.ItemId);
-			}, [])
-		);
-	};
+	async function fetchItems() {
+		// itemData.map((i) => AddItems(i));
+		const response = await fetch("http://localhost:5050/Items/");
+		let jsonResponse = await response.json();
+		console.log(jsonResponse);
+		setItems(jsonResponse);
+	}
+
+	// add to MongoDB
+	// async function AddItems(item) {
+	// 	const response = await fetch("http://localhost:5050/Items/", {
+	// 		method: "POST",
+	// 		headers: {
+	// 			"Content-Type": "application/json",
+	// 		},
+	// 		body: JSON.stringify(item),
+	// 	});
+	// }
 
 	return (
 		<div className="div-container">
@@ -30,12 +40,12 @@ function ItemContainer() {
 			<div className="ItemContainer">
 				{items.map((item) => (
 					<Item
-						key={item.ItemId}
-						id={item.ItemId}
-						name={item.ItemName}
-						url={item.ItemURL}
-						picture={item.ItemPicture}
-						price={item.ItemPrice}
+						key={item.Id}
+						id={item.Id}
+						name={item.Name}
+						url={item.URL}
+						picture={item.Picture}
+						price={item.Price}
 					/>
 				))}
 			</div>
