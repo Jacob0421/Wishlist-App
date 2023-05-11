@@ -24,14 +24,9 @@ function Item(props) {
 				}}
 				ref={ref}>
 				<Link
-					to={{
-						pathname: `/ViewItemDetails/${props.id}`,
-						state: {
-							name: props.name,
-						},
-					}}
+					to={`/ViewItemDetails/${props.id}`}
+					state={{ item: props }}
 					className="fill-parent"></Link>
-				{console.log(props)}
 				<img
 					className="ItemPicture"
 					src={props.picture}

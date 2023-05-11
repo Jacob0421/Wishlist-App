@@ -1,0 +1,38 @@
+:root{
+    --primary-color:#28136B;
+    --secondary-color:#253992;
+    --tertiary-color:#8A348C;
+    --flat-color: #E5E5E5;
+    --accent-color:#64D5FF;
+  }
+
+
+.container {
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: var(--flat-color);
+    height: 93.5vh;
+    overflow: hidden;
+}
+
+.item-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-img {
+    display:cover;
+    max-height: 30vh;
+    border-radius: 20px;
+    padding: 0 8vw;
+}
+
+.item-name {
+    padding: 0 10vw;
+}

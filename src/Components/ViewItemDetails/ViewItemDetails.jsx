@@ -1,14 +1,36 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import "./ViewItemDetails.css";
 
 function ViewItemDetails() {
-	const { state } = useLocation();
-	const { name } = state.state;
+	const location = useLocation();
+	const { item } = location.state;
 
 	return (
-		<div>
-			<p>{name}</p>
+		<div className="container">
+			<Link to={"/Wishlists"}>Back</Link>
+			<h2 className="item-name">{item.name}</h2>
+			<div className="item-container">
+				<div>
+					<p>Price: {item.price}</p>
+					<a
+						href={item.url}
+						target="_blank"
+						rel="noreferrer"
+						className="item-link">
+						<button>Visit Seller</button>
+					</a>
+					<Link
+						to={`/EditItem/${item.id}`}
+						state={{
+							item: item,
+							from: location.pathname,
+						}}>
+						<button>Edit Item</button>
+					</Link>
+				</div>
+				<img src={item.picture} alt={item.name} className="item-img" />
+			</div>
 		</div>
 	);
 }
