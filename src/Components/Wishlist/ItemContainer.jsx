@@ -1,4 +1,4 @@
-import { React, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 // import { Lists } from "../../Data/Lists";
 // import { Items as itemData } from "../../Data/Items";
 import Item from "./Item";
@@ -21,6 +21,7 @@ function ItemContainer() {
 		let jsonResponse = await response.json();
 		console.log(jsonResponse);
 		setItems(jsonResponse);
+		// setItems(itemData);
 	}
 
 	// add to MongoDB
@@ -40,8 +41,8 @@ function ItemContainer() {
 			<div className="ItemContainer">
 				{items.map((item) => (
 					<Item
-						key={item.Id}
-						id={item.Id}
+						key={item._id}
+						id={item._id}
 						name={item.Name}
 						url={item.URL}
 						picture={item.Picture}

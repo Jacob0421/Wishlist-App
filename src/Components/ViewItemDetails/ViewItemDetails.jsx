@@ -16,8 +16,9 @@ function ViewItemDetails() {
 					<a
 						href={item.url}
 						target="_blank"
-						rel="noreferrer"
-						className="item-link">
+						rel="noopener noreferrer"
+						className="item-link"
+					>
 						<button>Visit Seller</button>
 					</a>
 					<Link
@@ -25,7 +26,8 @@ function ViewItemDetails() {
 						state={{
 							item: item,
 							from: location.pathname,
-						}}>
+						}}
+					>
 						<button>Edit Item</button>
 					</Link>
 				</div>

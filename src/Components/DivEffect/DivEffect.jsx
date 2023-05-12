@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "./DivEffect.css";
 
 function DivEffect(props) {
@@ -30,7 +30,8 @@ function DivEffect(props) {
 		<div
 			className="primary"
 			ref={ref}
-			style={{ transitionDelay: props.delay + "ms" }}>
+			style={{ transitionDelay: props.delay + "ms" }}
+		>
 			This is my test div
 		</div>
 	);

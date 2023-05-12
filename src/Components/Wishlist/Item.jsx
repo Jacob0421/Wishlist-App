@@ -1,4 +1,4 @@
-import { React, useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./Item.css";
 
@@ -22,15 +22,18 @@ function Item(props) {
 					animationDuration: "1s",
 					animationFillMode: "forwards",
 				}}
-				ref={ref}>
+				ref={ref}
+			>
 				<Link
 					to={`/ViewItemDetails/${props.id}`}
 					state={{ item: props }}
-					className="fill-parent"></Link>
+					className="fill-parent"
+				></Link>
 				<img
 					className="ItemPicture"
 					src={props.picture}
-					alt={props.name}></img>
+					alt={props.name}
+				></img>
 				<p className="ItemName">{props.name}</p>
 				<p className="ItemPrice">
 					<strong>${props.price}</strong>
@@ -39,7 +42,8 @@ function Item(props) {
 					className="BuyNow-link"
 					href={props.url}
 					target="_blank"
-					rel="noreferrer">
+					rel="noopener noreferrer"
+				>
 					<button className="BuyNow">Buy Now!</button>
 				</a>
 			</div>
