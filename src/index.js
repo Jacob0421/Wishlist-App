@@ -4,10 +4,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Layout from "./Components/Layout/Layout";
 import App from "./Components/App/App";
-import ItemContainer from "./Components/Wishlist/ItemContainer";
-import ViewItemDetails from "./Components/ViewItemDetails/ViewItemDetails";
-import EditItem from "./Components/EditItem/EditItem";
+import ItemContainer from "./Components/Items/ItemContainer/ItemContainer";
+import ViewItemDetails from "./Components/Items/ItemDetails/ViewItemDetails";
+import EditItem from "./Components/Items/EditItem/EditItem";
 import Login from "./Components/Login/Login";
+import AddUser from "./Components/Users/AddUser";
 
 import "./index.css";
 
@@ -26,6 +27,7 @@ root.render(
 						element={<ViewItemDetails />}
 					/>
 					<Route exact path="/Item/Edit/:id" element={<EditItem />} />
+					<Route exact path="/Users" element={<AddUser />} />
 				</Route>
 			</Routes>
 		</Router>

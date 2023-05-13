@@ -13,6 +13,9 @@ function Layout() {
 					<li>
 						<Link to="/Wishlists">Wishlists</Link>
 					</li>
+					<li>
+						<Link to="/Users">Users</Link>
+					</li>
 				</ul>
 			</nav>
 
