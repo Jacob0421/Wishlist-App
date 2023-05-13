@@ -22,7 +22,7 @@ function ViewItemDetails() {
 						<button>Visit Seller</button>
 					</a>
 					<Link
-						to={`/EditItem/${item.id}`}
+						to={`/Item/Edit/${item.id}`}
 						state={{
 							item: item,
 							from: location.pathname,

@@ -22,10 +22,10 @@ root.render(
 					<Route path="/Wishlists" element={<ItemContainer />} />
 					<Route
 						exact
-						path="/ViewItemDetails/:id"
+						path="/Item/:id"
 						element={<ViewItemDetails />}
 					/>
-					<Route exact path="/EditItem/:id" element={<EditItem />} />
+					<Route exact path="/Item/Edit/:id" element={<EditItem />} />
 				</Route>
 			</Routes>
 		</Router>

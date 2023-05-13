@@ -25,7 +25,7 @@ function Item(props) {
 				ref={ref}
 			>
 				<Link
-					to={`/ViewItemDetails/${props.id}`}
+					to={`/Item/${props.id}`}
 					state={{ item: props }}
 					className="fill-parent"
 				></Link>

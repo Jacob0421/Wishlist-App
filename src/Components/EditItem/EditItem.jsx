@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useLocation, Link } from "react-router-dom";
+import { useNavigate, useLocation, Link } from "react-router-dom";
 import "./EditItem.css";
 
 function EditItem() {
@@ -7,52 +7,89 @@ function EditItem() {
 	const { item } = location.state;
 	const { from } = location.state;
 
-	const [imgURL, setImgURL] = useState(item.picture);
-	const [pasted, setPasted] = useState(false);
+	const [form, setForm] = useState({
+		name: item.name,
+		url: item.url,
+		imgURL: item.picture,
+		price: item.price,
+	});
 
-	const handleChange = (e) => {
-		if (pasted) {
-			setImgURL(e.target.value);
-		}
-		setPasted(false);
-	};
+	const navigate = useNavigate();
 
-	const handlePaste = () => {
-		setPasted(true);
-	};
+	function updateForm(value) {
+		return setForm((prev) => {
+			return { ...prev, ...value };
+		});
+	}
+
+	async function handleSubmit(e) {
+		e.preventDefault();
+		const editedItem = {
+			name: form.name,
+			url: form.url,
+			imgURL: form.imgURL,
+			price: form.price,
+		};
+		const response = await fetch(
+			`http://localhost:5050/Items/${item.id}/`,
+			{
+				method: "PATCH",
+				body: JSON.stringify(editedItem),
+				headers: {
+					"Content-Type": "application/json",
+				},
+			}
+		);
+		navigate("/Wishlists");
+	}
 
 	return (
 		<div className="container">
 			<Link to={from} state={{ item: item }}>
 				Back
 			</Link>
-			<form>
+			<form onSubmit={handleSubmit}>
 				<label>
 					Item Name:
-					<input type="text" value={item.name} />
+					<input
+						type="text"
+						id="name"
+						value={form.name}
+						onChange={(e) => updateForm({ name: e.target.value })}
+					/>
 				</label>
-				<label>
+				<label htmlFor="url">
 					Item URL:
-					<input type="text" value={item.url} />
+					<input
+						type="text"
+						id="url"
+						value={form.url}
+						onChange={(e) => updateForm({ url: e.target.value })}
+					/>
 				</label>
-				<label>
+				<label htmlFor="imgURL">
 					Item Picture URL:
 					<input
 						type="text"
-						placeholder={imgURL}
-						onPaste={handlePaste}
-						onChange={handleChange}
+						id="imgURL"
+						placeholder={form.imgURL}
+						onChange={(e) => updateForm({ imgURL: e.target.value })}
 					/>
 				</label>
 				<figure>
-					<img src={imgURL} alt={imgURL} />
+					<img src={form.imgURL} alt={form.name} />
 					<figcaption>Image Preview</figcaption>
 				</figure>
-				<label>
+				<label htmlFor="price">
 					Item Price:
-					<input type="text" value={item.price} />
+					<input
+						type="text"
+						id="price"
+						value={form.price}
+						onChange={(e) => updateForm({ price: e.target.value })}
+					/>
 				</label>
-				<button type="submit">Submit</button>
+				<input type="submit" value="Update" />
 			</form>
 		</div>
 	);
