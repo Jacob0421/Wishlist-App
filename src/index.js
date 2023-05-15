@@ -8,7 +8,7 @@ import ItemContainer from "./Components/Items/ItemContainer/ItemContainer";
 import ViewItemDetails from "./Components/Items/ItemDetails/ViewItemDetails";
 import EditItem from "./Components/Items/EditItem/EditItem";
 import Login from "./Components/Login/Login";
-import AddUser from "./Components/Users/AddUser";
+import AddUser from "./Components/Users/AddUser/AddUser";
 
 import "./index.css";
 

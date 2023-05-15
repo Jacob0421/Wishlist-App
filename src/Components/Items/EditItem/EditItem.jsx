@@ -22,6 +22,20 @@ function EditItem() {
 		});
 	}
 
+	async function fetchUpdatedItem() {
+		const response = await fetch(`http://localhost:5050/Items/${item.id}/`);
+
+		let responseItem = await response.json();
+		let newItem = {
+			id: responseItem._id,
+			name: responseItem.Name,
+			price: responseItem.Price,
+			picture: responseItem.Picture,
+			url: responseItem.URL,
+		};
+		return newItem;
+	}
+
 	async function handleSubmit(e) {
 		e.preventDefault();
 		const editedItem = {
@@ -40,7 +54,11 @@ function EditItem() {
 				},
 			}
 		);
-		navigate("/Wishlists");
+		// validate response.
+
+		navigate(`/Item/${item.id}`, {
+			state: { item: await fetchUpdatedItem() },
+		});
 	}
 
 	return (
