@@ -6,18 +6,11 @@
     --accent-color:#64D5FF;
 }
 
-.div-container {
-    /* display: flex; */
-    margin: 0 auto;
-    width: 80vw
-}
-
 .ItemContainer {
-    vertical-align: top;
+    width: 80vw;
+    height: 93vh;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
-    height: 93vh;
-    justify-content: center;
+    margin: 0 auto;
 }
