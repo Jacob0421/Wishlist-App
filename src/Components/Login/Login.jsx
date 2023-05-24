@@ -33,9 +33,12 @@ export default function Login() {
 	}
 
 	return (
-		<div className="login-container flex center-hor col">
+		<div className=" flex center-all col login-container">
 			<h1 className="center-all">Login</h1>
-			<form onSubmit={handleSubmit} className="flex col center-all">
+			<form
+				onSubmit={handleSubmit}
+				className="flex col center-all content-container"
+			>
 				<input
 					type="text"
 					placeholder="Email Address"
