@@ -17,7 +17,7 @@ function ItemContainer() {
 	}
 
 	return (
-		<div className="ItemContainer">
+		<div className="ItemContainer flex row center-container-hor">
 			{items.map((item) => (
 				<Item
 					key={item._id}

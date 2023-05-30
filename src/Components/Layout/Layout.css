@@ -7,27 +7,28 @@
 }
 
 nav {
+    display: flex;
+    justify-content: space-between;
     background: var(--flat-color);
     color: var(--accent-color);
-    display: flex;
     width: 100vw;
-    transition: 1s;
 }
 
 ul {
     display: flex;
-    align-items: center;
     list-style: none;
     margin: 0;
     padding: 0;
+    gap: 2px;
 }
 
 li {
     display: block;
     padding: 2vh .5vw;
-    min-width: 3vw;
+    min-width: 4vw;
     text-align: center;
-    background-color: var(--flat-color)
+    background-color: var(--flat-color);
+    position: relative;
 }
     nav > ul > li:hover{
         outline: 1px solid var(--primary-color);
@@ -37,4 +38,8 @@ li {
 li > a {
     height: 100%;
     text-decoration: none;
+}
+
+#right-nav {
+    padding-right: 20px;
 }

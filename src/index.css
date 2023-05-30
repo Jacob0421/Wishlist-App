@@ -17,11 +17,9 @@ body {
   overflow: overlay;
   background: linear-gradient(to bottom right,var(--primary-color) 40%, var(--secondary-color) 80%);
   background-size:150% 100%;
-  height: 100vh;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  overflow-x: hidden;
-  height: 100%;
+  height: 100vh;
 }
 
 *::-webkit-scrollbar {
@@ -37,11 +35,6 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
-}
-
-.content-container {
-  display: flex;
-  width: 80vw;justify-content: center;
 }
 
 .flex {
@@ -62,6 +55,10 @@ code {
   margin: 0 auto;
 }
 
-.center-hor {
+.center-container-hor{
+  margin: 0 auto;
+}
+
+.center-content-hor {
   justify-content: center;
 }

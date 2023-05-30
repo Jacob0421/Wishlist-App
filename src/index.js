@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Layout from "./Components/Layout/Layout";
-import App from "./Components/App/App";
 import ItemContainer from "./Components/Items/ItemContainer/ItemContainer";
 import ViewItemDetails from "./Components/Items/ItemDetails/ViewItemDetails";
 import EditItem from "./Components/Items/EditItem/EditItem";
@@ -18,7 +17,6 @@ root.render(
 		<Router>
 			<Routes>
 				<Route path="/" element={<Layout />}>
-					<Route index element={<App />} />
 					<Route path="/Login" element={<Login />} />
 					<Route path="/Wishlists" element={<ItemContainer />} />
 					<Route
@@ -27,7 +25,7 @@ root.render(
 						element={<ViewItemDetails />}
 					/>
 					<Route exact path="/Item/Edit/:id" element={<EditItem />} />
-					<Route exact path="/Users" element={<AddUser />} />
+					<Route path="/Users" element={<AddUser />} />
 				</Route>
 			</Routes>
 		</Router>

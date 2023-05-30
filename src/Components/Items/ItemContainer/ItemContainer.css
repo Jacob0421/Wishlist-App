@@ -8,9 +8,6 @@
 
 .ItemContainer {
     width: 80vw;
-    height: 93vh;
-    display: flex;
-    flex-direction: row;
+    height: 100vh;
     flex-wrap: wrap;
-    margin: 0 auto;
 }
