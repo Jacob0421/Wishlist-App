@@ -6,14 +6,23 @@ import { ChevronDown } from "react-feather";
 import { WishlistItems, LoggedInItems, NotLoggedInItems } from "./DropdownData";
 
 function Layout() {
-	const [dropdown, setDropdown] = useState(false);
+	const [wishListDropdown, setWishlistDropdown] = useState(false);
+	const [loginDropdown, setLoginDropdown] = useState(false);
 
-	const onMouseEnter = () => {
-		setDropdown(true);
+	const onLoginMouseEnter = () => {
+		setLoginDropdown(true);
 	};
 
-	const onMouseLeave = () => {
-		setDropdown(false);
+	const onLoginMouseLeave = () => {
+		setLoginDropdown(false);
+	};
+
+	const onWishlistMouseEnter = () => {
+		setWishlistDropdown(true);
+	};
+
+	const onWishlistMouseLeave = () => {
+		setWishlistDropdown(false);
 	};
 
 	return (
@@ -29,19 +38,31 @@ function Layout() {
 					<li>
 						<Link to="/Users">Users</Link>
 					</li>
-					<li onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+					<li
+						onMouseEnter={onWishlistMouseEnter}
+						onMouseLeave={onWishlistMouseLeave}>
 						<Link>
 							Wishlists
 							<ChevronDown style={{ maxHeight: "16px" }} />
-							{dropdown && (
+							{wishListDropdown && (
 								<NavbarDropdown dropdownItems={WishlistItems} />
 							)}
 						</Link>
 					</li>
 				</ul>
 				<ul id="right-nav">
-					<li>
-						<Link to="/Login">Login</Link>
+					<li
+						onMouseEnter={onLoginMouseEnter}
+						onMouseLeave={onLoginMouseLeave}>
+						<Link>
+							Login
+							<ChevronDown style={{ maxHeight: "16px" }} />
+							{loginDropdown && (
+								<NavbarDropdown
+									dropdownItems={NotLoggedInItems}
+								/>
+							)}
+						</Link>
 					</li>
 				</ul>
 			</nav>
