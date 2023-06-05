@@ -21,6 +21,12 @@ a .dropdown-item {
     justify-content: start;
     z-index: 9999;
     background-color: var(--flat-color);
+    box-shadow: 0 5px 5px black;
 }
+
+    li:hover {
+        outline: 1px solid var(--primary-color);
+        background-color: #D5D5D5;
+    }
 
 .dropdown-hidden {display: none;}

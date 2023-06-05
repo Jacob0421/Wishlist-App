@@ -39,6 +39,7 @@
     max-height: 7rem;
     max-width: 20vw;
     transition-duration: .5s;
+    border-radius: 10px;;
 }
     .ItemPicture:hover {
         max-height: 100%;

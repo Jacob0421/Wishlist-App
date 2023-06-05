@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ValidateUserToken } from "../../Functions/ValidateUserToken";
 import "./Login.css";
 
 export default function Login() {
@@ -23,13 +24,25 @@ export default function Login() {
 
 		const response = await fetch("http://localhost:5050/Login/", {
 			method: "POST",
+			mode: "cors",
+			credentials: "include",
 			headers: {
 				"Content-Type": "application/json",
 			},
 			body: JSON.stringify(loginDetails),
 		});
 
-		console.log(response);
+		if (!response.ok) {
+			let message = "Test";
+		}
+
+		let jsonResponse = await response.json();
+
+		console.log(jsonResponse);
+
+		// const isVerified = await ValidateUserToken(jsonResponse.token);
+
+		// console.log(isVerified);
 	}
 
 	return (
@@ -37,8 +50,7 @@ export default function Login() {
 			<h1 className="center-all">Login</h1>
 			<form
 				onSubmit={handleSubmit}
-				className="flex col center-all content-container"
-			>
+				className="flex col center-all content-container">
 				<input
 					type="text"
 					placeholder="Email Address"
