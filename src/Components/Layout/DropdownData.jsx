@@ -7,6 +7,10 @@ export const WishlistItems = [
 		title: "Create New List",
 		path: "/Wishlists/Add",
 	},
+	{
+		title: "Add Item",
+		path: "/Item/Add",
+	},
 ];
 
 export const LoggedInItems = [

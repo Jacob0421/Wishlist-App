@@ -8,6 +8,7 @@ import ViewItemDetails from "./Components/Items/ItemDetails/ViewItemDetails";
 import EditItem from "./Components/Items/EditItem/EditItem";
 import Login from "./Components/Login/Login";
 import AddUser from "./Components/Users/AddUser/AddUser";
+import { AddItem } from "./Components/Items/AddItem/AddItem";
 
 import "./index.css";
 
@@ -24,6 +25,7 @@ root.render(
 						path="/Item/:id"
 						element={<ViewItemDetails />}
 					/>
+					<Route exact path="/Item/Add" element={<AddItem />} />
 					<Route exact path="/Item/Edit/:id" element={<EditItem />} />
 					<Route path="/Users" element={<AddUser />} />
 				</Route>

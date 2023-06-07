@@ -12,7 +12,6 @@ function ItemContainer() {
 	async function fetchItems() {
 		const response = await fetch("http://localhost:5050/Items/");
 		let jsonResponse = await response.json();
-		console.log(jsonResponse);
 		setItems(jsonResponse);
 	}
 
